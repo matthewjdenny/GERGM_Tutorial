@@ -1,0 +1,146 @@
+\documentclass[article]{jss}
+
+\usepackage{amsmath}
+
+\newcommand{\bt}{\pmb{\theta}}
+\newcommand{\h}{\mathbf{h}}
+\newcommand{\N}{\mathcal{N}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
+
+\emergencystretch 1.5em
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% almost as usual
+\author{Matthew J.\ Denny\\Penn State University \And 
+		James D.\ Wilson\\University of San Francisco \And 
+		Bruce A.\ Desmarais\\Penn State University \And
+        Skyler J.\ Cranmer\\The Ohio State University \And
+        Shankar Bhamidi\\University of North Carolina\\Chapel Hill}
+\title{Generalized Exponential Random Graph Models with \pkg{GERGM}: Estimation and Simulation}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Matthew J. Denny, James D. Wilson, Bruce A. Desmarais, Skyler J. Cranmer, Shankar Bhamidi} %% comma-separated
+\Plaintitle{Generalized Exponential Random Graph Models with GERGM: Estimation and Simulation} %% without formatting
+\Shorttitle{Generalized Exponential Random Graph Models with GERGM} %% a short title (if necessary)
+
+%% an abstract and keywords
+\Abstract{
+\noindent The \pkg{GERGM} package is an implementation of the generalized exponential random graph model (GERGM), including methods for estimation and simulation using Gibbs sampling and Metropolis Hastings. Here, we illustrate the generalized exponential random graph model and its implementation in \pkg{GERGM} using data on financial flows between OECD counties, and migration flows between U.S. states.
+}
+\Keywords{relational data, network analysis, generalized exponential random graph model, GERGM, \pkg{GERGM}, \proglang{R}}
+\Plainkeywords{relational data, network analysis, generalized exponential random graph model, GERGM, GERGM, R} %% without formatting
+%% at least one keyword must be supplied
+
+%% publication information
+%% NOTE: Typically, this can be left commented and will be filled out by the technical editor
+%% \Volume{50}
+%% \Issue{9}
+%% \Month{June}
+%% \Year{2012}
+%% \Submitdate{2012-06-04}
+%% \Acceptdate{2012-06-04}
+
+%% The address of (at least) one author should be given
+%% in the following format:
+\Address{\\
+  Matthew J.\ Denny\\
+  Penn State University\\
+  Department of Political Science\\
+  220 Pond Lab\\
+  University Park, PA 16802\\
+  E-mail: \email{mdenny@psu.edu}\\
+  URL: \url{http://www.mjdenny.com/}\\
+  \\
+  James D.\ Wilson\\
+  University of San Francisco\\
+  Department of Mathematics and Statistics\\
+  2130 Fulton Street\\
+  San Francisco, CA 94117-1080\\
+  E-mail: \email{jdwilson4@usfca.edu}\\
+  URL: \url{http://jameswd.web.unc.edu/}\\
+  \\
+  Bruce A.\ Desmarais\\
+  Penn State University\\
+  Department of Political Science\\
+  220 Pond Lab\\
+  University Park, PA 16802\\
+  E-mail: \email{bdesmarais@psu.edu}\\
+  URL: \url{http://people.umass.edu/bruced/}\\
+  \\
+  Skyler J.\ Cranmer\\
+  The Ohio State University\\
+  Department of Political Science\\
+  2032 Derby Hall, 154 N Oval Mall\\
+  Columbus OH 43210, USA\\
+  E-mail: \email{cranmer.12@osu.edu}\\
+  URL: \url{http://www.skylercranmer.net}\\
+  Shankar Bhamidi\\
+  University of North Carolina, Chapel Hill\\
+  Department of Statistics and Operations Research\\
+  304 Hanes Hall CB \#3260\\
+  University of North Carolina\\
+  Chapel Hill, NC 27599\\
+  E-mail: \email{bhamidi@email.unc.edu}\\
+  URL: \url{http://shankarbhamidi.web.unc.edu/}\\}
+%% It is also possible to add a telephone and fax number
+%% before the e-mail in the following format:
+%% Telephone: +43/512/507-7103
+%% Fax: +43/512/507-2851
+
+%% for those who use Sweave please include the following line (with % symbols):
+%% need no \usepackage{Sweave.sty}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%% include your article here, just as usual
+%% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
+
+\section[The GERGM package]{The \pkg{GERGM} package}
+
+The \pkg{GERGM} package for the \proglang{R}
+
+
+\section{The Generalized Exponential Random Graph Model}
+
+
+\subsection{The model}
+
+\subsection{Gibbs sampling and Metropolis Hastings}
+
+\section{Pre-estimation data manipulations} \label{dataprep}
+
+
+
+\subsection{Data format}
+Several \proglang{R} packages should be loaded for running the examples presented below: .
+
+\begin{Schunk}
+\begin{Sinput}
+R> require("GERGM")
+R> set.seed(10)
+\end{Sinput}
+\end{Schunk}
+
+\subsection{Exploring the dataset}
+
+\section{Estimation}\label{sect:estimation}
+
+
+\section{Convergence Diagnostics}\label{sect:other}
+
+
+\section{Discussion}
+
+\bibliography{article}
+
+\end{document}
